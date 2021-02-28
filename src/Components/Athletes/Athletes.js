@@ -1,6 +1,9 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDollarSign, faFunnelDollar} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDollarSign,
+  faFunnelDollar,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Athletes = (props) => {
   const athletes = props.athletes;
@@ -15,12 +18,17 @@ const Athletes = (props) => {
         {athletes.map((footballer) => (
           <>
             <h5>
-              Selected Player: <b>{footballer.name}</b> - Player Wage:{" "}
-              <b><FontAwesomeIcon icon={faDollarSign} />{footballer.salary}M</b>
+              Selected Player: <b>{footballer.name}</b> - Player Wage:
+              <b>
+                <FontAwesomeIcon icon={faDollarSign} />
+                {footballer.salary}M
+              </b>
             </h5>
           </>
         ))}
-        <h4>Total Expanse: <FontAwesomeIcon icon={faFunnelDollar} /> {total} M</h4>
+        <h4>
+          Total Expanse: <FontAwesomeIcon icon={faFunnelDollar} /> {total} M
+        </h4>
       </div>
     </>
   );
