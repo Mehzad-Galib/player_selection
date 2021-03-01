@@ -14,11 +14,11 @@ const Athletes = (props) => {
   return (
     <>
       <div>
-        <h3>Player Selected: {athletes.length}</h3>
+        <h3>Player Selected for the Club: {athletes.length}</h3>
         {athletes.map((footballer) => (
           <>
             <h5>
-              Selected Player: <b>{footballer.name}</b> - Player Wage:
+              Player Name: <b>{footballer.name}</b> - Player Wage:
               <b>
                 <FontAwesomeIcon icon={faDollarSign} />
                 {footballer.salary}M

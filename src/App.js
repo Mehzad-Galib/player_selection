@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import FakeData from "../src/FakeData/fakeData.json";
 import Info from "../src/Components/Info/Info";
@@ -15,20 +16,25 @@ function App() {
   };
   return (
     <>
-      <div className="container text-center">
-        <Athletes athletes={athletes}></Athletes>
+    <div className="container text-center">
+        <Athletes key={athletes.id} athletes={athletes}></Athletes>
       </div>
-      <div className="d-flex">
-        <header className="container my-5">
-          {player.map((player) => (
-            <Info
-              handleAddPlayer={handleAddPlayer}
-              info={player}
-              key={player.id}
-            ></Info>
-          ))}
-        </header>
+
+      <main className="container my-5">
+      <section className="col-md-12 border-end g-5">
+      <div className="row row-cols-4">
+        
+        {player.map((player) => (
+          <Info
+            handleAddPlayer={handleAddPlayer}
+            info={player}
+            key={player.id}
+          ></Info>
+        ))}
       </div>
+      
+      </section>
+      </main>
     </>
   );
 }
