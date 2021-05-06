@@ -13,8 +13,11 @@ const Athletes = (props) => {
   });
   return (
     <>
-      <div>
-        <h3>Player Selected for the desired Club: {athletes.length}</h3>
+      <div className='col-md-12'>
+        <h3>Player Selected: {athletes.length}</h3>
+        <h4>
+          Total Expanse: <FontAwesomeIcon icon={faFunnelDollar} /> {total} M
+        </h4>
         {athletes.map((footballer) => (
           <>
             <h5>
@@ -26,9 +29,7 @@ const Athletes = (props) => {
             </h5>
           </>
         ))}
-        <h4>
-          Total Expanse: <FontAwesomeIcon icon={faFunnelDollar} /> {total} M
-        </h4>
+        
       </div>
     </>
   );

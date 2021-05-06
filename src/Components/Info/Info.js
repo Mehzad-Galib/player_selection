@@ -6,12 +6,12 @@ const Info = (props) => {
   const { name, image, salary, Nationality, club } = props.info;
   const [click, setClick] = useState(false);
   const handleAddPlayer = props.handleAddPlayer;
-  const imgStyle = { width: "150px", height: "280px" };
+  const imgStyle = {height: "10rem" };
   return (
-    <>
-      <div className="card shadow-lg rounded-3">
+    <div className='col-md-3 col-sm-6 my-2'>
+      <div style={{height: '30rem'}} className="card shadow-lg rounded-3">
         <img
-          imgStyle={imgStyle}
+          style={imgStyle}
           src={image}
           className="card-img-top"
           alt="..."
@@ -44,7 +44,7 @@ const Info = (props) => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
