@@ -14,7 +14,7 @@ const Athletes = (props) => {
   return (
     <>
       <div>
-        <h3>Player Selected for the Club: {athletes.length}</h3>
+        <h3>Player Selected for the desired Club: {athletes.length}</h3>
         {athletes.map((footballer) => (
           <>
             <h5>
